@@ -1,11 +1,17 @@
-# Theme Building in WordPress
+# Converting a Hugo Website into a Custom WordPress, and You Can Too!
+
+- screenshot.png (880px x 660px)
 
 
-I'm taking an existing website built with Hugo Static Site Generator and turning it into a custom WordPress theme.
+The goal is to to take my existing website built with Hugo Static Site Generator and turning it into a custom WordPress theme.
 
-I am going to attempt to retain all styles and functionality on the new WordPress theme.
+The new WordPress theme should have all the same style and functionality of the current website.
 
-I'll be following WordPress's [Template Hierarchy]() to so that WP will find all the files it needs to. I'll use Advanced Custom Fields plugin to add editing capabilities to the Admin interface. All of this is driven by PHP.
+The website looks like this:
+
+![WP-Theme Image](http://github.com/images/bafflingscience/hugo-to-wordpressscreenshot.png)
+
+I'll be following WordPress's Template Hierarchy from their [Theme Developer Handbook](https://developer.wordpress.org/themes/) to so that WP will find all the files it needs to. I'll use Advanced Custom Fields plugin to add editing capabilities to the Admin interface. All of this is driven by PHP.
 
 Starting out in the root directory `wamp/www/wp-content/themes`, I'll create a new directory for the theme.
 `mkdir custom-theme`, then into the directory `cd custom-theme`.
@@ -87,19 +93,14 @@ function load_stylesheets() {
 	wp_enqueue_style('custom');
 }
 
-
+`wp_head()`
 ```
-use `wp_head()`
 
 
-# Advanced Custom Fields
 
-[A Beginner's Guide to Advanced Custom Fields](https://www.advancedcustomfields.com/blog/beginners-guide-advanced-custom-fields/)
-
-
-# [Automattic/_s](https://github.com/Automattic/_s/blob/master/single.php)  and Underscores
+### [Advanced Custom Fields](https://www.advancedcustomfields.com/blog/beginners-guide-advanced-custom-fields/)
 
 
-## [Lorem Ipsum](https://lipsum.com/)
-
-## [Secret Chrome for Geniuses](brave://about/)
+[Automattic/_s](https://github.com/Automattic/_s/blob/master/single.php)  and Underscores
+[Lorem Ipsum](https://lipsum.com/)
+[All the Chrome Tools](brave://about/)
